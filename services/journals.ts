@@ -5,7 +5,7 @@ import { redirect } from "next/navigation";
 import { db } from "@/data"
 import { journals } from "@/data/schema";
 import { NewJournal } from "@/data/types";
-import { desc, eq, sql } from "drizzle-orm";
+import { asc, desc, eq, sql } from "drizzle-orm";
 import { analyseJournal } from "./analysis";
 
 export async function createJournal({ title, content }: NewJournal) {
@@ -19,9 +19,12 @@ export async function createJournal({ title, content }: NewJournal) {
   redirect(`/journals/${createdJournal.id}`)
 }
 
-export async function getAllJournals() {
+export async function getAllJournals(order: "desc" | "asc" = "desc") {
   return db.query.journals.findMany({
-    orderBy: [desc(journals.updatedAt)]
+    orderBy: [order === "desc" ? desc(journals.updatedAt) : asc(journals.updatedAt)],
+    with: {
+      analysis: true
+    }
   })
 }
 

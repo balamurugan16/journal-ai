@@ -35,12 +35,12 @@ export default function JournalCard({ id, title, content, updatedAt, isFavorite 
         </Link>
       </ContextMenuTrigger>
       <ContextMenuContent>
-        <ContextMenuItem onSelect={() => toggleFavorite(id, isFavorite)}>
+        <ContextMenuItem onSelect={() => toggleFavorite(id, !!isFavorite)}>
           {isFavorite ? "Unfavorite" : "Make as favorite"}
         </ContextMenuItem>
         <ContextMenuItem onSelect={() => createJournal({ title, content })}>Duplicate</ContextMenuItem>
         <ContextMenuItem onSelect={() => deleteJournal(id)}>Delete</ContextMenuItem>
       </ContextMenuContent>
     </ContextMenu>
-  )
+  );
 }
