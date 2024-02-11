@@ -1,7 +1,5 @@
-import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import JournalCard from "./journal-card";
 import { getAllJournals } from "@/services/journals";
-import Link from "next/link";
 import NewJournal from "./new-journal";
 
 export default async function JournalsPage() {
@@ -16,9 +14,7 @@ export default async function JournalsPage() {
         <NewJournal />
         {
           journals.map((journal) => (
-            <Link href={`journals/${journal.id}`} key={journal.id}>
-              <JournalCard {...journal} />
-            </Link>
+            <JournalCard key={journal.id} {...journal} />
           ))
         }
       </section>

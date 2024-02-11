@@ -25,6 +25,7 @@ export function formatTimestamp(date: Date) {
       year: "2-digit",
       month: "long",
       day: "2-digit",
+      weekday: "long"
     }
   }
   const formatter = new Intl.DateTimeFormat(undefined, options)

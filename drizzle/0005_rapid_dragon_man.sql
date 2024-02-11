@@ -1,0 +1,1 @@
+ALTER TABLE "analysis" ADD COLUMN "id" serial NOT NULL;

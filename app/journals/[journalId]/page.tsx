@@ -4,7 +4,9 @@ import InteractiveEditor from "./interactive-editor";
 
 export default async function Page({ params }: { params: { journalId: string } }) {
   const journal = await getJournal(parseInt(params.journalId));
-  if (journal === null) notFound()
+  if (journal === undefined) notFound()
+
+  console.log(journal)
 
   return (
     <div className="m-10">

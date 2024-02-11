@@ -15,6 +15,41 @@
       "when": 1707569505757,
       "tag": "0001_chief_molecule_man",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1707621384258,
+      "tag": "0002_rare_firedrake",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1707636531786,
+      "tag": "0003_even_marten_broadcloak",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1707636625918,
+      "tag": "0004_lonely_flatman",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "5",
+      "when": 1707649434031,
+      "tag": "0005_rapid_dragon_man",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "5",
+      "when": 1707653133708,
+      "tag": "0006_silent_tusk",
+      "breakpoints": true
     }
   ]
 }

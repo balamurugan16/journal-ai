@@ -6,6 +6,7 @@ User Stories
 [*] setting up database
 [*] setting up the markdown editor
 
+
 [] integrating with AI
   [] sentiment analysis (summary, score, emotion tags with emojis)
   [] chatbot feature
@@ -13,4 +14,8 @@ User Stories
 [] Charts highlighting the sentiment score
 [] chatbot UI 
 [] setting up authentication
+[] card and table view
+[] favourites feature
+[] context menu to delete, duplicate, favourite the journals
 [] styling
+   [] change font
