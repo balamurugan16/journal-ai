@@ -1,5 +1,5 @@
 import JournalCard from "./journal-card";
-import { getAllJournals } from "@/services/journals";
+import { getAllJournals } from "@/lib/journals";
 import NewJournal from "./new-journal";
 
 export default async function JournalsPage() {

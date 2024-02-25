@@ -11,7 +11,7 @@ import {
   ContextMenuItem,
   ContextMenuTrigger,
 } from "@/components/ui/context-menu"
-import { createJournal, deleteJournal, toggleFavorite } from "@/services/journals";
+import { createJournal, deleteJournal, toggleFavorite } from "@/lib/journals";
 
 export default function JournalCard({ id, title, content, updatedAt, isFavorite }: Journal) {
   return (

@@ -1,6 +1,6 @@
 "use server";
 
-import { Analysis, Journal, NewJournal } from "@/data/types";
+import { Journal } from "@/data/types";
 import { getPrompt, parser } from "@/lib/prompt";
 import { ChatGoogleGenerativeAI } from "@langchain/google-genai"
 import { RunnableSequence } from "@langchain/core/runnables"
@@ -15,12 +15,12 @@ const model = new ChatGoogleGenerativeAI({
 })
 
 export async function analyseJournal(journal: Pick<Journal, "title" | "content">) {
-  const prompt = await getPrompt(journal.title, journal.content);
+  const prompt = await getPrompt();
   const chain = RunnableSequence.from([
     prompt,
     model,
     parser
-  ])
+  ]);
   const response = await chain.invoke({
     content: journal.content,
     title: journal.title,

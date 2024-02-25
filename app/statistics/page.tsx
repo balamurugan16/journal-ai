@@ -1,4 +1,4 @@
-import { getAllJournals } from "@/services/journals";
+import { getAllJournals } from "@/lib/journals";
 import SentimentHistory from "./sentiment-history";
 
 export default async function Statistics() {

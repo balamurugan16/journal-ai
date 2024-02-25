@@ -4,7 +4,7 @@ import { Suspense, useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import { Analysis, Journal } from "@/data/types";
 import useAutosave from "@/lib/hooks/use-autosave";
-import { getJournal, updateJournal } from "@/services/journals";
+import { getJournal, updateJournal } from "@/lib/journals";
 import { formatTimestamp } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
 

@@ -1,13 +1,14 @@
 "use client";
 
-import { createJournal } from "@/services/journals";
+import { createJournal } from "@/lib/journals";
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function NewJournal() {
+
   const handleClick = async () => {
     createJournal({
       title: "Untitled",
-      content: "Write about your day!"
+      content: "Write about your day!",
     })
   }
 
