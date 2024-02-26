@@ -14,7 +14,7 @@ export default async function layout({ children }: PropsWithChildren) {
   }
 
   return (
-    <main className="grid place-items-center p-10 h-screen w-screen grid-cols-1 md:grid-cols-2">
+    <main className="grid place-items-center p-8 h-screen w-screen grid-cols-1 md:grid-cols-2">
       <section className="hidden md:block">
         <Image
           alt="happy man with short hair"
