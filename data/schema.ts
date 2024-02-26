@@ -9,14 +9,14 @@ export const journals = pgTable("journals", {
   createdAt: timestamp("created_at").defaultNow().notNull(),
   updatedAt: timestamp("updated_at").defaultNow().notNull(),
   isFavorite: boolean("is_favorite").default(false),
-  analysisId: uuid("analysis_id").references(() => analysis.id),
+  analysisId: uuid("analysis_id").references(() => analysis.id, { onDelete: "cascade" }),
   userId: uuid("user_id").notNull()
 })
 
 export const journalsRelations = relations(journals, ({ one }) => ({
   analysis: one(analysis, {
     fields: [journals.analysisId],
-    references: [analysis.id]
+    references: [analysis.id],
   }),
 }))
 

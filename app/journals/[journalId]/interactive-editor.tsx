@@ -21,11 +21,12 @@ function InteractiveEditor(props: Props) {
 
   const updateEntry = async () => {
     // setLoading(true)
-    await updateJournal(
-      props.id,
+    await updateJournal({
+      id: props.id,
       title,
-      content
-    )
+      content,
+      analysisId: props.analysisId
+    })
     // setLoading(false)
   }
 

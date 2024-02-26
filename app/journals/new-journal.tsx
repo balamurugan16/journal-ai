@@ -2,14 +2,17 @@
 
 import { createJournal } from "@/lib/journals";
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
+import { useRouter } from "next/navigation";
 
 export default function NewJournal() {
+  const router = useRouter()
 
   const handleClick = async () => {
-    createJournal({
+    const { id } = await createJournal({
       title: "Untitled",
       content: "Write about your day!",
     })
+    router.push(`/journals/${id}`)
   }
 
   return (

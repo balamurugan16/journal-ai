@@ -1,0 +1,1 @@
+ALTER TABLE "journals" ALTER COLUMN "id" DROP DEFAULT;
